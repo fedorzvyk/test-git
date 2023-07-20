@@ -35,15 +35,15 @@
 
 // 4) Потренироваться и переписать цикл еще двумя способами*/
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
 // const a = prompt('Один из последних просмотренных фильмов?', ''),
 //       b = prompt('На сколько оцените его?', ''),
@@ -52,27 +52,49 @@ const personalMovieDB = {
 
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
-let i=0
-while  (i < 2){
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-        b = prompt('На сколько оцените его?', '');
+// let i=0
+// while  (i < 2){
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//         b = prompt('На сколько оцените его?', '');
     
-    if (a !== '' && a !== null && b !== '' && b !== null && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        i++
+//     if (a !== '' && a !== null && b !== '' && b !== null && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         i++
+//     } else {
+//         console.log('error')
+//         i--
+//     }
+// }
+
+// if (numberOfFilms < 10) {
+//     console.log('Просмотрено довольно мало фильмов')
+// } else if (numberOfFilms > 10 && numberOfFilms < 30) {
+//     console.log('Вы классический зритель')
+// }  else if (numberOfFilms > 30) {
+//     console.log('Вы киноман')
+// } else console.log('error')
+
+// console.log(personalMovieDB);
+
+function getMathResult(number, count) {
+    let result = '';
+    if (count <= 0 || typeof (count) !== "number") {
+        console.log(number)
+        return number
     } else {
-        console.log('error')
-        i--
+        for (let i = 1; i <= count; i++) {
+            result += `${ number * i }`
+            if (i !== count) {
+                result += '---'
+            }              
+        }
     }
+    console.log(result)
 }
 
-if (numberOfFilms < 10) {
-    console.log('Просмотрено довольно мало фильмов')
-} else if (numberOfFilms > 10 && numberOfFilms < 30) {
-    console.log('Вы классический зритель')
-}  else if (numberOfFilms > 30) {
-    console.log('Вы киноман')
-} else console.log('error')
+getMathResult(3, 10)
 
-console.log(personalMovieDB);
 
+const str = 'hello, world';
+
+console.log(str.substring(8, 3))
